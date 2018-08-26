@@ -1,0 +1,10 @@
+#磁盘坏道屏蔽
+#检测坏道
+sudo  badblocks -v /dev/sda10 > badsectors.txt
+#屏蔽坏道
+sudo e2fsck -l badsectors.txt /dev/sda10
+
+#挂载磁盘
+sudo mount /dev/sda1 /data/
+sudo umount /data
+sudo fuser -km /data
