@@ -1,4 +1,7 @@
-安装samba服务
+
+&01 安装samba服务
+
+```
 #启用samba
 sudo apt install samba samba-common-bin
 cat /etc/samba/smb.conf
@@ -18,3 +21,4 @@ sudo smbpasswd -a pi
 sudo smbpasswd -e pi
 #重启
 sudo smb restart
+```
